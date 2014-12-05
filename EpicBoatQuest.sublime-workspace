@@ -1,0 +1,603 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ca",
+				"calendar_hours"
+			],
+			[
+				"filen",
+				"filenames"
+			],
+			[
+				"ra",
+				"rainbow_colours"
+			],
+			[
+				"i",
+				"ife	Ifelse"
+			],
+			[
+				"spaw",
+				"spawner"
+			],
+			[
+				"is",
+				"isSpawning"
+			],
+			[
+				"cur",
+				"currentWaypointNumber"
+			],
+			[
+				"w",
+				"waypoints"
+			],
+			[
+				"wa",
+				"waypoints"
+			],
+			[
+				"de",
+				"deltaTime"
+			],
+			[
+				"curr",
+				"currentTime"
+			],
+			[
+				"Tra",
+				"transform"
+			],
+			[
+				"Tr",
+				"transform"
+			],
+			[
+				"near",
+				"nearNothing"
+			],
+			[
+				"ne",
+				"nearPlayer"
+			],
+			[
+				"tr",
+				"transform"
+			],
+			[
+				"tra",
+				"target"
+			],
+			[
+				"Ch",
+				"ChasingPlayer"
+			],
+			[
+				"Foll",
+				"FollowingPath"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Assets/Scripts/Leap/LeapHandWave.cs",
+			"settings":
+			{
+				"buffer_size": 2609,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 162.0,
+		"selected_items":
+		[
+			[
+				"plus",
+				"Wrap Plus: Wrap Lines"
+			],
+			[
+				"wra",
+				"Wrap Plus: Wrap Lines"
+			],
+			[
+				"w",
+				"Wrap Plus: Wrap Lines"
+			],
+			[
+				"wrap",
+				"Wrap Plus: Wrap Lines"
+			],
+			[
+				"list pa",
+				"Package Control: List Packages"
+			],
+			[
+				"en",
+				"Package Control: Enable Package"
+			],
+			[
+				"enabl",
+				"Package Control: Enable Package"
+			],
+			[
+				"brow",
+				"Preferences: Browse Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"enab",
+				"Package Control: Enable Package"
+			],
+			[
+				"enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"pack",
+				"Package Control: Disable Package"
+			],
+			[
+				"markdown ed",
+				"Preferences: MarkdownEditing Settings – Default"
+			],
+			[
+				"browse",
+				"Preferences: Browse Packages"
+			],
+			[
+				"exe",
+				"Execute and Update Ruby Markers"
+			],
+			[
+				"exec",
+				"Execute and Update Ruby Markers"
+			],
+			[
+				"ex",
+				"LaTeXTools: View PDF"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 487.0
+	},
+	"console":
+	{
+		"height": 126.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/Sonna/Projects/games/gamejam2014/Assets/Scripts/MicrophoneInput.cs",
+		"/Users/Sonna/Projects/games/gamejam2014/Assets/Scripts/SpawnByLoudness.cs",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/images/survey/programming_skills/radar_chart_(developer_1vusuzzrha).png",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/scripts/Bash/rename_to_lowercase.sh",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/scripts/Bash/rename_spaces_with_underscores.sh",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/data/worklogs/Ryan BOWEN - Semester 1.csv",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/templates/packages.tex",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/chapters/02_worklogs/02_team_2_worklog_hours.tex",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/Calendar HeatMap (Team 1).csv",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/data/worklogs/aggregated_data/Calendar HeatMap (Ryan HISHEH - Semester 2).csv",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/data/worklogs/aggregated_data/Calendar_HeatMap_(Team_1).csv",
+		"/Users/Sonna/Library/Application Support/Sublime Text 2/Packages/User/Plain text.sublime-settings",
+		"/Users/Sonna/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/Sonna/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/Sonna/Library/Application Support/Sublime Text 2/Packages/User/LaTeX.sublime-settings",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/templates/default_latex.template",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/chapters/~appendix.md",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/templates/multicol_longtable.tex",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/chapters/~references.md",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/chapters/06_research_proposals/01_research_proposals.md",
+		"/Users/Sonna/Library/Application Support/Sublime Text 2/Packages/User/Markdown.sublime-settings",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/chapters/00_metadata.md",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/chapters/03_team_analysis/02_teams/01_swing_kings.md",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/templates/definition_lists.tex",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/test.dot",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/COS30022 Software Engineering Project 2/team4_subject_zero/dot-graph.sh",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/COS30022 Software Engineering Project 2/team4_subject_zero/graph.sh",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/chapters/00_structure/00_ideas.md",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/Makefile",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/pandoc-template/unique_users.md",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/chapters/thing.md",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/COS30022 Software Engineering Project 2/team4_subject_zero/thing.md",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/COS30022 Software Engineering Project 2/team4_subject_zero/enb.dot",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/COS30022 Software Engineering Project 2/team4_subject_zero/graph.dot",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/scripts/Survey/capture_heroku_pgbackups.sh",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/chapters/bibliography.yaml",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/bibliography.yaml",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/chapters/references.yaml",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/chapters/03_team_analysis/02_teams/04_subject_zero.md",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/templates/titlesec.tex",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/chapters/05_team_tools/01_setup_configutation.md",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/documentation/amazon_signup.md",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/chapters/00_structure/overall_report_structure.md",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/chapters/02_team_analysis/04_subject_zero.md",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/scripts/R/calendar_heatmap.R",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/scripts/R/accumalatedhours_function.R",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/chapters/03_survey_summary.md",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/chapters/02_team_analysis/02_magnicity.md",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/chapters/02_team_analysis/03_prismania.md",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/spikes_template/0_metadata.md",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/chapters/0_metadata.md",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/chapters/02_team_analysis/01_swing_kings.md",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/commit_totals.md",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/daniel_clements/activity/by_date.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/daniel_clements/activity/day_of_week.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/daniel_clements/activity/hour_of_day.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/daniel_clements/activity/hour_of_week.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/daniel_clements/activity/month_of_year.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/daniel_clements/activity/year.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/daniel_clements/activity/year_month.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/daniel_clements/author_details/changed_lines_by_date.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/daniel_clements/author_details/commits_by_date.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/daniel_clements/author_details/deletions_by_date.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/daniel_clements/author_details/insertions_by_date.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/hughxsaunders/activity/by_date.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/hughxsaunders/activity/day_of_week.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/hughxsaunders/activity/hour_of_day.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/hughxsaunders/activity/hour_of_week.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/hughxsaunders/activity/month_of_year.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/hughxsaunders/activity/year.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/hughxsaunders/activity/year_month.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/hughxsaunders/author_details/changed_lines_by_date.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/hughxsaunders/author_details/commits_by_date.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/hughxsaunders/author_details/deletions_by_date.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/hughxsaunders/author_details/insertions_by_date.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/jameskernaghan/activity/by_date.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/jameskernaghan/activity/day_of_week.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/jameskernaghan/activity/hour_of_day.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/jameskernaghan/activity/hour_of_week.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/jameskernaghan/activity/month_of_year.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/jameskernaghan/activity/year.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/jameskernaghan/activity/year_month.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/jameskernaghan/author_details/changed_lines_by_date.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/jameskernaghan/author_details/commits_by_date.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/jameskernaghan/author_details/deletions_by_date.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/jameskernaghan/author_details/insertions_by_date.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/milton_plotkin/activity/by_date.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/milton_plotkin/activity/day_of_week.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/milton_plotkin/activity/hour_of_day.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/milton_plotkin/activity/hour_of_week.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/milton_plotkin/activity/month_of_year.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/milton_plotkin/activity/year.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/milton_plotkin/activity/year_month.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/milton_plotkin/author_details/changed_lines_by_date.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/milton_plotkin/author_details/commits_by_date.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/milton_plotkin/author_details/deletions_by_date.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/milton_plotkin/author_details/insertions_by_date.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/rybo5000/activity/by_date.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/rybo5000/activity/day_of_week.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/rybo5000/activity/hour_of_day.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/rybo5000/activity/hour_of_week.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/rybo5000/activity/month_of_year.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/rybo5000/activity/year.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/rybo5000/activity/year_month.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/rybo5000/author_details/changed_lines_by_date.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/rybo5000/author_details/commits_by_date.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/rybo5000/author_details/deletions_by_date.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/rybo5000/author_details/insertions_by_date.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/sonna_bot/activity/by_date.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/sonna_bot/activity/day_of_week.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/sonna_bot/activity/hour_of_day.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/sonna_bot/activity/hour_of_week.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/sonna_bot/activity/month_of_year.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/sonna_bot/activity/year.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/sonna_bot/activity/year_month.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/sonna_bot/author_details/changed_lines_by_date.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/sonna_bot/author_details/commits_by_date.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/sonna_bot/author_details/deletions_by_date.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team1/authors/sonna_bot/author_details/insertions_by_date.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team2/authors/cactuarzero/activity/by_date.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team2/authors/cactuarzero/activity/day_of_week.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team2/authors/cactuarzero/activity/hour_of_day.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team2/authors/cactuarzero/activity/hour_of_week.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team2/authors/cactuarzero/activity/month_of_year.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team2/authors/cactuarzero/activity/year.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team2/authors/cactuarzero/activity/year_month.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team2/authors/cactuarzero/author_details/changed_lines_by_date.html",
+		"/Users/Sonna/ownCloud/documents/Swinburne Documents/Semester 10/ICT40007 Research Project/research-project/appendix/git_stats/team2/authors/cactuarzero/author_details/commits_by_date.html"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"<project>",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"1&2",
+			"milton_plotkin",
+			"1\\&2\n1\\&2",
+			"johnathon_mcdonnel",
+			"[",
+			"james_kernaghan",
+			"One",
+			"ref",
+			"name",
+			"supertabular",
+			"tabular",
+			"longtable",
+			"\\tikz\\commit",
+			"red",
+			"0.8",
+			",",
+			"```",
+			"_Commits",
+			"|",
+			"toc",
+			"footnotes",
+			"spike reports",
+			"../../../",
+			",",
+			"1",
+			"2",
+			"1",
+			"calendar_heatmap",
+			"Loading required package: ",
+			"stock.data",
+			"Semester 1",
+			"&2",
+			" - Semester 1&2",
+			"Semester 2",
+			".csv",
+			" ",
+			" - ",
+			"- ",
+			"  ",
+			"-",
+			" - ",
+			".",
+			"pmam",
+			".",
+			"ampm",
+			"pmpm",
+			"/",
+			"\\n",
+			"- ",
+			"30",
+			" ",
+			"  ",
+			"-",
+			"am|pm",
+			"-",
+			"- ",
+			"-",
+			".",
+			"30pm",
+			"- ",
+			" ",
+			"-",
+			" - ",
+			"  ",
+			"Midnight",
+			"/",
+			"newdata",
+			" -",
+			"{",
+			"accumalated_hours_",
+			"Age",
+			"azureusgrowth",
+			"azureus_ca",
+			"Error",
+			"View",
+			"> ",
+			"opened",
+			"opened on",
+			"https",
+			"  ",
+			"needs review",
+			"opened",
+			"12",
+			"\\n",
+			"  ",
+			"QkaejzGKDA",
+			"c5UqsAMn9A",
+			"VaCm7hFiIw",
+			"imKYe6sk9g",
+			"zwlHr0lr6A",
+			"FL5ggAH7YQ",
+			"1VUSuzZrHA",
+			"KasxNPKmqQ",
+			"JTRdcoOuAQ",
+			"commit.+\\n+.+\\n+Author.+\\n.+",
+			"commit.+\\n+Author.+\\n.+",
+			"Author: ",
+			" \n",
+			"heading",
+			"-",
+			". ",
+			"# deleted:    ",
+			"amazon_signup",
+			"# deleted:    ",
+			"images/",
+			"wrap",
+			"waitTime",
+			"GameObject",
+			"currentWaypointNumber",
+			"currentTime",
+			"lastDeltaTime",
+			"tr",
+			"velocity",
+			"Player",
+			"player",
+			"Player",
+			"transform",
+			"Transform",
+			"transform",
+			"Transform",
+			"transform",
+			"rotationSpeed",
+			"void",
+			"isRuning",
+			"moveForward",
+			"3",
+			"WanderState",
+			"Wander"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"1_and_2",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Assets/Scripts/Leap/LeapHandWave.cs",
+					"settings":
+					{
+						"buffer_size": 2609,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 92.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"lower",
+				"appendix/scripts/Bash/rename_to_lowercase.sh"
+			],
+			[
+				"unders",
+				"appendix/scripts/Bash/rename_spaces_with_underscores.sh"
+			],
+			[
+				"make",
+				"Makefile"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 181.0,
+	"status_bar_visible": true
+}
