@@ -52,6 +52,15 @@ public class LeapHandWave : MonoBehaviour
         return h;
     }
 
+
+    // This script should capture the difference between large set number of frames;
+    // e.g every fifth frame it gets the Player's hand position and rotations and
+    // calculates the positive difference.
+    //
+    // The calculated maginitude is then applied as force to the boat object in the
+    // scene either directly or indriectly (possible an invisible collider object to
+    // simulate wind)
+    //
     void FixedUpdate()
     {
 
