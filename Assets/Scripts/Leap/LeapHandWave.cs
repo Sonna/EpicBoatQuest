@@ -68,6 +68,10 @@ public class LeapHandWave : MonoBehaviour
         Hand leftHand = GetLeftMostHand(frame);
         Hand rightHand = GetRightMostHand(frame);
 
+        foreach (Hand hand in frame.Hands) {
+            Debug.Log(hand);
+        }
+
         if (frame.Hands.Count >= 2)
         {
             // takes the average vector of the forward vector of the hands, used for the
