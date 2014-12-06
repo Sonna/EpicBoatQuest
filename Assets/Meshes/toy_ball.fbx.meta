@@ -1,18 +1,25 @@
 fileFormatVersion: 2
-guid: bfa66c603d4bde643a2fc7f561b694f2
+guid: df0b0afcad8d3a24598a6ac7650dd9c0
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: pCylinder1
+    100000: pSphere1
+    100002: pSphere2
+    100004: //RootNode
+    400000: pSphere1
+    400002: pSphere2
+    400004: //RootNode
+    2300000: pSphere1
+    2300002: pSphere2
+    3300000: pSphere1
+    3300002: pSphere2
+    4300000: pSphere1
+    4300002: pSphere2
     9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
-    materialSearch: 1
+    materialSearch: 2
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -28,7 +35,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .75
+    globalScale: .25
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
