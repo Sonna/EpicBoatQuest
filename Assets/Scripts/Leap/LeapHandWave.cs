@@ -73,7 +73,11 @@ public class LeapHandWave : MonoBehaviour
         }
 
         if (frame.Hands.Count >= 1 && leftHand.IsValid) {
-            rigidbody.AddRelativeForce(leftHand.PalmVelocity.ToUnityScaled() / 10, ForceMode.Impulse);
+            Vector3 tempCamera = Camera.main.transform.forward;
+            tempCamera.y = transform.position.y;
+            Vector3 wind = tempCamera / 35;
+
+            rigidbody.AddRelativeForce(wind, ForceMode.Impulse);
         }
 //        if (frame.Hands.Count >= 2)
 //        {
