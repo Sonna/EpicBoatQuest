@@ -69,10 +69,11 @@ public class LeapHandWave : MonoBehaviour
         Hand leftHand = GetLeftMostHand(frame);
 //        Hand rightHand = GetRightMostHand(frame);
 
+/*
         foreach (Hand hand in frame.Hands) {
             Debug.Log(hand);
         }
-
+*/
 
         if (frame.Hands.Count >= 1 && leftHand.IsValid) {
             Vector3 tempCamera = Camera.main.transform.forward;
