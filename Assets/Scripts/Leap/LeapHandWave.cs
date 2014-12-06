@@ -10,10 +10,12 @@ public class LeapHandWave : MonoBehaviour
 
     Controller m_leapController;
 
+    private int particleSpawnRate = 3;
     private int windDrag;
     private int windMouseDrag;
     private Vector2 mousePosLastframe;
     private CameraController cameraController;
+    private ParticleSystem particleSystem;
 
     // Use this for initialization
     void Start()
@@ -23,6 +25,7 @@ public class LeapHandWave : MonoBehaviour
         windMouseDrag = 1000;
         mousePosLastframe = Input.mousePosition;
         cameraController = Camera.main.GetComponent<CameraController>();
+        particleSystem = Camera.main.GetComponentInChildren<ParticleSystem>();
     }
 
     Hand GetLeftMostHand(Frame f)
@@ -66,6 +69,7 @@ public class LeapHandWave : MonoBehaviour
     //
     void FixedUpdate()
     {
+        float magnitude = 0f;
         Frame frame = m_leapController.Frame();
 
         Hand leftHand = GetLeftMostHand(frame);
@@ -80,6 +84,7 @@ public class LeapHandWave : MonoBehaviour
             Vector3 tempCamera = Camera.main.transform.forward;
             tempCamera.y = transform.position.y;
             Vector3 wind = tempCamera * leftHand.PalmVelocity.Magnitude / windDrag;
+            magnitude = leftHand.PalmVelocity.Magnitude;
 
             rigidbody.AddRelativeForce(wind, ForceMode.Impulse);
 
@@ -107,10 +112,18 @@ public class LeapHandWave : MonoBehaviour
             Vector3 tempCamera = Camera.main.transform.forward;
             tempCamera.y = transform.position.y;
             Vector3 wind = tempCamera * mousePosDiff.magnitude / windMouseDrag;
+            magnitude = mousePosDiff.magnitude;
 
             rigidbody.AddRelativeForce(wind, ForceMode.Impulse);
 
             mousePosLastframe = mousePos;
         }
+
+        ProduceWind(magnitude);
+    }
+
+    private void ProduceWind(float magnitude)
+    {
+        particleSystem.emissionRate = magnitude / particleSpawnRate;
     }
 }
