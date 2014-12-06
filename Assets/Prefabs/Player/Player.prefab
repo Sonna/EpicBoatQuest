@@ -85,6 +85,7 @@ GameObject:
   - 4: {fileID: 400008}
   - 33: {fileID: 3300004}
   - 23: {fileID: 2300004}
+  - 114: {fileID: 11400008}
   m_Layer: 0
   m_Name: Mast
   m_TagString: Untagged
@@ -422,8 +423,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7821c0cfb9ffaa468b8cdc72c650732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceDampening: .25
-  forceFactor: 1.10000002
+  density: 500
+  slicesPerAxis: 2
+  isConcave: 0
+  voxelsLimit: 16
+--- !u!114 &11400008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34384adbdc17ff7429542d1965b64235, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 0}
+  rotationSpeed: .75
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1
