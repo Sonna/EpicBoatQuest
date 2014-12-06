@@ -514,7 +514,7 @@ WindZone:
   m_Enabled: 1
   m_Mode: 0
   m_Radius: 20
-  m_WindMain: 0
+  m_WindMain: 4
   m_WindTurbulence: 1
   m_WindPulseMagnitude: .5
   m_WindPulseFrequency: .00999999978
@@ -525,7 +525,7 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100012}
   lengthInSec: 5
-  startDelay: .600000024
+  startDelay: 0
   speed: 1
   randomSeed: 0
   looping: 1
@@ -535,7 +535,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 3
+      scalar: 5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -695,7 +695,7 @@ ParticleSystem:
         rgba: 2365587455
       minMaxState: 0
     startSize:
-      scalar: .300000012
+      scalar: .479999989
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -760,14 +760,14 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
       minMaxState: 0
-    gravityModifier: 0
+    gravityModifier: -.200000003
     inheritVelocity: 0
     maxNumParticles: 1000
   ShapeModule:
     serializedVersion: 2
     enabled: 1
     type: 4
-    radius: 2.0999999
+    radius: 5
     angle: 0
     length: 5
     boxX: 1
