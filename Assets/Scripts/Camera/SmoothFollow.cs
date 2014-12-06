@@ -34,7 +34,7 @@ public class SmoothFollow : MonoBehaviour
     {
         if(target == null)
         {
-            target = GameObject.FindGameObjectWithTag("Player");
+            target = GameObject.FindGameObjectWithTag("Player").transform;
         }
     }
 
