@@ -29,12 +29,22 @@ public class CameraController : MonoBehaviour
         
         if(Input.GetMouseButton((int)MOUSEBUTTON.LEFT_CLICK))
         {
-            this.transform.RotateAround(boat.transform.position, Vector3.up, rotateSpeed * Time.deltaTime);
+            rotateLeft();
         }
         
         if(Input.GetMouseButton((int)MOUSEBUTTON.RIGHT_CLICK))
         {
-            this.transform.RotateAround(boat.transform.position, Vector3.up, -rotateSpeed * Time.deltaTime);
+            rotateRight();
         }
+    }
+
+    public void rotateLeft()
+    {
+        this.transform.RotateAround(boat.transform.position, Vector3.up, rotateSpeed * Time.deltaTime);
+    }
+
+    public void rotateRight()
+    {
+        this.transform.RotateAround(boat.transform.position, Vector3.up, -rotateSpeed * Time.deltaTime);
     }
 }
