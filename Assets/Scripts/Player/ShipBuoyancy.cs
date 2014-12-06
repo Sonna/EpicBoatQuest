@@ -10,6 +10,7 @@ public class ShipBuoyancy : MonoBehaviour
     private Vector3 uplift;
     private Vector3 forceDirection;
     private float boatBottom;
+    private float waterHeight = 0f;
 
     // Use this for initialization
     void Start () 
@@ -24,7 +25,9 @@ public class ShipBuoyancy : MonoBehaviour
         if(inWater)
         {
             forceDirection = transform.position + transform.TransformDirection(Vector3.down);
-            forceFactor = (1f - transform.position.y);
+
+            // Changes the force factor to be the level of the water height
+            forceFactor = (1f - (transform.position.y - waterHeight));
 
             uplift = -Physics.gravity * (forceFactor - rigidbody.velocity.y * bounceDampening);
             rigidbody.AddForceAtPosition(uplift, forceDirection);
@@ -36,6 +39,11 @@ public class ShipBuoyancy : MonoBehaviour
         if(other.tag == "Water")
         {
             inWater = true;
+
+            // Update the water height when it hits the object
+            waterHeight = other.transform.position.y + (other.gameObject.renderer.bounds.size.y / 2f);
+
+            Debug.Log("Water top = " + waterHeight);
         }
     }
         
