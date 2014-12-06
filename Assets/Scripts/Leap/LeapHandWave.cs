@@ -79,6 +79,5 @@ public class LeapHandWave : MonoBehaviour
 //        {
             // something for two hands
 //        }
-//    }
-
+    }
 }
