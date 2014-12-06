@@ -108,6 +108,7 @@ public class LeapHandWave : MonoBehaviour
                     cameraController.rotateRight();
                 }
             }
+          ProduceWind(magnitude/100);
         }
         else
         {
@@ -123,9 +124,8 @@ public class LeapHandWave : MonoBehaviour
             rigidbody.AddRelativeForce(wind, ForceMode.Impulse);
 
             mousePosLastframe = mousePos;
+            ProduceWind(magnitude/10);
         }
-
-        ProduceWind(magnitude);
     }
 
     private void ProduceWind(float magnitude)
