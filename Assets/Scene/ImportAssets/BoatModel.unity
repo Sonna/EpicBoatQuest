@@ -113,6 +113,14 @@ Prefab:
       propertyPath: m_RootMapOrder
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 10a115301bc0c8047a052e0f7e1a237f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.60977757
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 10a115301bc0c8047a052e0f7e1a237f, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 10a115301bc0c8047a052e0f7e1a237f, type: 3}
   m_RootGameObject: {fileID: 1445236681}
