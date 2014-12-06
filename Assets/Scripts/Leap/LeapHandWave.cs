@@ -10,6 +10,7 @@ public class LeapHandWave : MonoBehaviour
 
     Controller m_leapController;
 
+    private int windDrag;
 
     // Use this for initialization
     void Start()
@@ -19,7 +20,7 @@ public class LeapHandWave : MonoBehaviour
         {
             Debug.LogError("LeapHandWave must have a parent object to control");
         }
-
+        windDrag = 35;
     }
 
     Hand GetLeftMostHand(Frame f)
@@ -75,7 +76,7 @@ public class LeapHandWave : MonoBehaviour
         if (frame.Hands.Count >= 1 && leftHand.IsValid) {
             Vector3 tempCamera = Camera.main.transform.forward;
             tempCamera.y = transform.position.y;
-            Vector3 wind = tempCamera / 35;
+            Vector3 wind = tempCamera / windDrag;
 
             rigidbody.AddRelativeForce(wind, ForceMode.Impulse);
         }
