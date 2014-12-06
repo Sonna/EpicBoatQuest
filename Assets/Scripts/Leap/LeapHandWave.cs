@@ -66,7 +66,7 @@ public class LeapHandWave : MonoBehaviour
         Frame frame = m_leapController.Frame();
 
         Hand leftHand = GetLeftMostHand(frame);
-        Hand rightHand = GetRightMostHand(frame);
+//        Hand rightHand = GetRightMostHand(frame);
 
         foreach (Hand hand in frame.Hands) {
             Debug.Log(hand);
