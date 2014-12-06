@@ -81,22 +81,24 @@ public class LeapHandWave : MonoBehaviour
             tempCamera.y = transform.position.y;
             Vector3 wind = tempCamera * leftHand.PalmVelocity.Magnitude / windDrag;
 
-            rigidbody.AddRelativeForce(wind, ForceMode.Impulse);
-
             // something for two hands
             if (frame.Hands.Count >= 2)
             {
-                float roll = rightHand.PalmPosition.Roll;
+                wind = tempCamera * rightHand.PalmVelocity.Magnitude / windDrag;
+
+                float roll = leftHand.PalmPosition.Roll;
                 Debug.Log("Roll Ya'll " + roll);
-                if (roll > 2.5f)
+                if (roll < -2.7f)
                 {
                     cameraController.rotateLeft();
                 }
-                else if (roll < 2.4f)
+                else if (roll > -2.5f)
                 {
                     cameraController.rotateRight();
                 }
             }
+
+            rigidbody.AddRelativeForce(wind, ForceMode.Impulse);
         }
         else
         {
