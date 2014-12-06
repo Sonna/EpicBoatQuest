@@ -13,6 +13,7 @@ public class LeapHandWave : MonoBehaviour
     private int windDrag;
     private int windMouseDrag;
     private Vector2 mousePosLastframe;
+    private CameraController cameraController;
 
     // Use this for initialization
     void Start()
@@ -21,6 +22,7 @@ public class LeapHandWave : MonoBehaviour
         windDrag = 10000;
         windMouseDrag = 1000;
         mousePosLastframe = Input.mousePosition;
+        cameraController = Camera.main.GetComponent<CameraController>();
     }
 
     Hand GetLeftMostHand(Frame f)
@@ -67,12 +69,12 @@ public class LeapHandWave : MonoBehaviour
         Frame frame = m_leapController.Frame();
 
         Hand leftHand = GetLeftMostHand(frame);
-//        Hand rightHand = GetRightMostHand(frame);
-
+        Hand rightHand = GetRightMostHand(frame);
+/*
         foreach (Hand hand in frame.Hands) {
             Debug.Log(hand);
         }
-
+*/
 
         if (frame.Hands.Count >= 1 && leftHand.IsValid) {
             Vector3 tempCamera = Camera.main.transform.forward;
@@ -80,6 +82,21 @@ public class LeapHandWave : MonoBehaviour
             Vector3 wind = tempCamera * leftHand.PalmVelocity.Magnitude / windDrag;
 
             rigidbody.AddRelativeForce(wind, ForceMode.Impulse);
+
+            // something for two hands
+            if (frame.Hands.Count >= 2)
+            {
+                float roll = rightHand.PalmPosition.Roll;
+                Debug.Log("Roll Ya'll " + roll);
+                if (roll > 2.5f)
+                {
+                    cameraController.rotateLeft();
+                }
+                else if (roll < 2.4f)
+                {
+                    cameraController.rotateRight();
+                }
+            }
         }
         else
         {
@@ -95,9 +112,5 @@ public class LeapHandWave : MonoBehaviour
 
             mousePosLastframe = mousePos;
         }
-//        if (frame.Hands.Count >= 2)
-//        {
-            // something for two hands
-//        }
     }
 }
