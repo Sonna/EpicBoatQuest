@@ -27,12 +27,16 @@ public class CameraController : MonoBehaviour
     {
         // Make hand gestures here
         
-        if(Input.GetMouseButton((int)MOUSEBUTTON.LEFT_CLICK))
+        if(Input.GetMouseButton((int)MOUSEBUTTON.LEFT_CLICK)
+           || Input.GetKey(KeyCode.LeftArrow)
+           || Input.GetKey(KeyCode.A))
         {
             rotateLeft();
         }
         
-        if(Input.GetMouseButton((int)MOUSEBUTTON.RIGHT_CLICK))
+        if(Input.GetMouseButton((int)MOUSEBUTTON.RIGHT_CLICK)
+           || Input.GetKey(KeyCode.RightArrow)
+           || Input.GetKey(KeyCode.D))
         {
             rotateRight();
         }
