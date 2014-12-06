@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 10a115301bc0c8047a052e0f7e1a237f
+guid: e2dcd016e70c0c84babe99a35f741b9f
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -7,8 +7,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Box001
-    4300002: Boat Body
+    4300000: Cylinder001
     9500000: //RootNode
   materials:
     importMaterials: 1
