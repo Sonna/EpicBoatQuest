@@ -63,14 +63,13 @@ public class LeapHandWave : MonoBehaviour
     //
     void FixedUpdate()
     {
-
         Frame frame = m_leapController.Frame();
+
+        Hand leftHand = GetLeftMostHand(frame);
+        Hand rightHand = GetRightMostHand(frame);
 
         if (frame.Hands.Count >= 2)
         {
-            Hand leftHand = GetLeftMostHand(frame);
-            Hand rightHand = GetRightMostHand(frame);
-
             // takes the average vector of the forward vector of the hands, used for the
             // pitch of the plane.
             Vector3 avgPalmForward = (frame.Hands[0].Direction.ToUnity() + frame.Hands[1].Direction.ToUnity()) * 0.5f;
