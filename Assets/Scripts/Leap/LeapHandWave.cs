@@ -16,7 +16,7 @@ public class LeapHandWave : MonoBehaviour
     void Start()
     {
         m_leapController = new Controller();
-        windDrag = 35;
+        windDrag = 10000;
     }
 
     Hand GetLeftMostHand(Frame f)
@@ -73,7 +73,7 @@ public class LeapHandWave : MonoBehaviour
             //Vector3 wind = leftHand.PalmVelocity.Magnitude / windDrag;
             Vector3 tempCamera = Camera.main.transform.forward;
             tempCamera.y = transform.position.y;
-            Vector3 wind = tempCamera / windDrag;
+            Vector3 wind = tempCamera * leftHand.PalmVelocity.Magnitude / windDrag;
 
             rigidbody.AddRelativeForce(wind, ForceMode.Impulse);
         }
