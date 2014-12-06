@@ -70,6 +70,7 @@ public class LeapHandWave : MonoBehaviour
         }
 
         if (frame.Hands.Count >= 1 && leftHand.IsValid) {
+            //Vector3 wind = leftHand.PalmVelocity.Magnitude / windDrag;
             Vector3 tempCamera = Camera.main.transform.forward;
             tempCamera.y = transform.position.y;
             Vector3 wind = tempCamera / windDrag;
