@@ -80,13 +80,13 @@ public class LeapHandWave : MonoBehaviour
             float speed = leftHand.PalmVelocity.Magnitude;
 
             Vector3 tempCamera = Camera.main.transform.forward;
-            tempCamera.y = transform.position.y;
-            Vector3 wind = tempCamera * speed / windDrag;
+            Vector3 localForward = transform.worldToLocalMatrix.MultiplyVector(tempCamera);
+            localForward.y = transform.position.y;
+            Vector3 wind = localForward * speed / windDrag;
 
             if(speed >= 5.0f)
             {
-                //Vector3 targetDir = tempCamera;
-                Vector3 targetDir = tempCamera * speed;
+                Vector3 targetDir = localForward * speed;
                 float step = 0.125f * Time.deltaTime;
                 Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0F);
                 transform.rotation = Quaternion.LookRotation(newDir);
@@ -95,7 +95,7 @@ public class LeapHandWave : MonoBehaviour
             // something for two hands
             if (frame.Hands.Count >= 2)
             {
-                wind = tempCamera * rightHand.PalmVelocity.Magnitude / windDrag;
+                wind = localForward * rightHand.PalmVelocity.Magnitude / windDrag;
 
                 float roll = leftHand.PalmPosition.Roll;
                 Debug.Log("Roll Ya'll " + roll);
