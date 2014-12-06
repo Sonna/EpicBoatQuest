@@ -72,6 +72,8 @@ public class LeapHandWave : MonoBehaviour
             Debug.Log(hand);
         }
 
+        Debug.Log(leftHand.PalmVelocity.Magnitude);
+
         if (frame.Hands.Count >= 2)
         {
             // takes the average vector of the forward vector of the hands, used for the
