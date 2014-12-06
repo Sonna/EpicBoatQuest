@@ -10,16 +10,22 @@ public class LeapHandWave : MonoBehaviour
 
     Controller m_leapController;
 
+    private int particleSpawnRate = 3;
+    private int windDrag;
+    private int windMouseDrag;
+    private Vector2 mousePosLastframe;
+    private CameraController cameraController;
+    private ParticleSystem particleSystem;
 
     // Use this for initialization
     void Start()
     {
         m_leapController = new Controller();
-        if (transform.parent == null)
-        {
-            Debug.LogError("LeapHandWave must have a parent object to control");
-        }
-
+        windDrag = 10000;
+        windMouseDrag = 1000;
+        mousePosLastframe = Input.mousePosition;
+        cameraController = Camera.main.GetComponent<CameraController>();
+        particleSystem = Camera.main.GetComponentInChildren<ParticleSystem>();
     }
 
     Hand GetLeftMostHand(Frame f)
@@ -52,41 +58,72 @@ public class LeapHandWave : MonoBehaviour
         return h;
     }
 
+
+    // This script should capture the difference between large set number of frames;
+    // e.g every fifth frame it gets the Player's hand position and rotations and
+    // calculates the positive difference.
+    //
+    // The calculated maginitude is then applied as force to the boat object in the
+    // scene either directly or indriectly (possible an invisible collider object to
+    // simulate wind)
+    //
     void FixedUpdate()
     {
-
+        float magnitude = 0f;
         Frame frame = m_leapController.Frame();
 
-        if (frame.Hands.Count >= 2)
-        {
-            Hand leftHand = GetLeftMostHand(frame);
-            Hand rightHand = GetRightMostHand(frame);
+        Hand leftHand = GetLeftMostHand(frame);
+        Hand rightHand = GetRightMostHand(frame);
+/*
+        foreach (Hand hand in frame.Hands) {
+            Debug.Log(hand);
+        }
+*/
 
-            // takes the average vector of the forward vector of the hands, used for the
-            // pitch of the plane.
-            Vector3 avgPalmForward = (frame.Hands[0].Direction.ToUnity() + frame.Hands[1].Direction.ToUnity()) * 0.5f;
+        if (frame.Hands.Count >= 1 && leftHand.IsValid) {
+            Vector3 tempCamera = Camera.main.transform.forward;
+            tempCamera.y = transform.position.y;
+            Vector3 wind = tempCamera * leftHand.PalmVelocity.Magnitude / windDrag;
+            magnitude = leftHand.PalmVelocity.Magnitude;
 
-            Vector3 handDiff = leftHand.PalmPosition.ToUnityScaled() - rightHand.PalmPosition.ToUnityScaled();
+            rigidbody.AddRelativeForce(wind, ForceMode.Impulse);
 
-            Vector3 newRot = transform.parent.localRotation.eulerAngles;
-            newRot.z = -handDiff.y * 20.0f;
-
-            // adding the rot.z as a way to use banking (rolling) to turn.
-            newRot.y += handDiff.z * 3.0f - newRot.z * 0.03f * transform.parent.rigidbody.velocity.magnitude;
-            newRot.x = -(avgPalmForward.y - 0.1f) * 100.0f;
-
-            float forceMult = 20.0f;
-
-            // if closed fist, then stop the plane and slowly go backwards.
-            if (frame.Fingers.Count < 3)
+            // something for two hands
+            if (frame.Hands.Count >= 2)
             {
-                forceMult = -3.0f;
+                float roll = rightHand.PalmPosition.Roll;
+                Debug.Log("Roll Ya'll " + roll);
+                if (roll > 2.5f)
+                {
+                    cameraController.rotateLeft();
+                }
+                else if (roll < 2.4f)
+                {
+                    cameraController.rotateRight();
+                }
             }
+        }
+        else
+        {
+//            Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 mousePos = Input.mousePosition;
+            Vector2 mousePosDiff = mousePos - mousePosLastframe;
 
-            transform.parent.localRotation = Quaternion.Slerp(transform.parent.localRotation, Quaternion.Euler(newRot), 0.1f);
-            transform.parent.rigidbody.velocity = transform.parent.forward * forceMult;
+            Vector3 tempCamera = Camera.main.transform.forward;
+            tempCamera.y = transform.position.y;
+            Vector3 wind = tempCamera * mousePosDiff.magnitude / windMouseDrag;
+            magnitude = mousePosDiff.magnitude;
+
+            rigidbody.AddRelativeForce(wind, ForceMode.Impulse);
+
+            mousePosLastframe = mousePos;
         }
 
+        ProduceWind(magnitude);
     }
 
+    private void ProduceWind(float magnitude)
+    {
+        particleSystem.emissionRate = magnitude / particleSpawnRate;
+    }
 }
