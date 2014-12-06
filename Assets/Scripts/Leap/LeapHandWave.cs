@@ -16,10 +16,6 @@ public class LeapHandWave : MonoBehaviour
     void Start()
     {
         m_leapController = new Controller();
-        if (transform.parent == null)
-        {
-            Debug.LogError("LeapHandWave must have a parent object to control");
-        }
         windDrag = 35;
     }
 
