@@ -169,8 +169,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7821c0cfb9ffaa468b8cdc72c650732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceDampening: .200000003
-  forceFactor: 0
+  density: 400
+  slicesPerAxis: 2
+  isConcave: 0
+  voxelsLimit: 16
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
