@@ -40,6 +40,11 @@ public class CameraController : MonoBehaviour
         {
             rotateRight();
         }
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            boat.rigidbody.AddRelativeForce(Camera.main.transform.forward, ForceMode.Acceleration);
+        }
     }
 
     public void rotateLeft()
