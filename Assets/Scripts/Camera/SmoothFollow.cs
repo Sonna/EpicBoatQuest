@@ -29,6 +29,15 @@ public class SmoothFollow : MonoBehaviour
     public float heightDamping = 2.0f;
     public float rotationDamping = 3.0f;
 
+
+    public void Start()
+    {
+        if(target == null)
+        {
+            target = GameObject.FindGameObjectWithTag("Player");
+        }
+    }
+
     void LateUpdate()
     {
         // Early out if we don't have a target
