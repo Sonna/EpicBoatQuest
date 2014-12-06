@@ -77,9 +77,20 @@ public class LeapHandWave : MonoBehaviour
 */
 
         if (frame.Hands.Count >= 1 && leftHand.IsValid) {
+            float speed = leftHand.PalmVelocity.Magnitude;
+
             Vector3 tempCamera = Camera.main.transform.forward;
             tempCamera.y = transform.position.y;
-            Vector3 wind = tempCamera * leftHand.PalmVelocity.Magnitude / windDrag;
+            Vector3 wind = tempCamera * speed / windDrag;
+
+            if(speed >= 5.0f)
+            {
+                //Vector3 targetDir = tempCamera;
+                Vector3 targetDir = tempCamera * speed;
+                float step = 0.125f * Time.deltaTime;
+                Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0F);
+                transform.rotation = Quaternion.LookRotation(newDir);
+            }
 
             // something for two hands
             if (frame.Hands.Count >= 2)
