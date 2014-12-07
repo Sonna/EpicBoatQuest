@@ -22,6 +22,7 @@ public class SpawnByLoudness : MonoBehaviour {
             Vector3 scale = new Vector3(l,l,l);
             GameObject newObject = (GameObject)Instantiate(objectToSpawn, this.transform.position, Quaternion.identity);
             newObject.transform.localScale += scale;
+            newObject.rigidbody.AddRelativeForce(this.transform.forward, ForceMode.Impulse);
         }
    }
 }

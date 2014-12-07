@@ -23,7 +23,7 @@ public class LeapHandWave : MonoBehaviour
     void Start()
     {
         m_leapController = new Controller();
-        windDrag = 10000;
+        windDrag = 5000;
         windMouseDrag = 1000;
         mousePosLastframe = Input.mousePosition;
         cameraController = Camera.main.GetComponent<CameraController>();
