@@ -5,7 +5,7 @@ using System.Collections;
 public class MicrophoneInput : MonoBehaviour {
     public float sensitivity = 100;
     public float loudness = 0;
-    public string device = "";
+    public string device = "Logitech USB Microphone";
 
     void Start() {
         if (device == null) device = Microphone.devices[0];
