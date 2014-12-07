@@ -4,6 +4,8 @@ using System.Collections;
 
 public class MainMenu : MonoBehaviour
 {
+    private Controller m_leapController;
+
     public GUISkin MainMenuSkin;
     public float Width;
     public float Height;
@@ -25,6 +27,8 @@ public class MainMenu : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
+        m_leapController = new Controller();
+
         CurrentMenu = Menu.Main;
         if (Width == 0 ) { Width = (UnityEngine.Screen.width * 0.5f); }
         if (Height == 0 ) { Height = (UnityEngine.Screen.height * 0.5f); }
@@ -33,6 +37,16 @@ public class MainMenu : MonoBehaviour
     // Update is called once per frame
     void OnGUI ()
     {
+        Frame frame = m_leapController.Frame();
+
+        if (frame.Hands.Count >= 1)
+        {
+            if(frame.Hands[0].PalmVelocity.Magnitude >= 1000.0f)
+            {
+                Application.LoadLevel("Level01");
+            }
+        }
+
         GUI.skin = MainMenuSkin;
 
         // Get half the screen and desired GUI item width
@@ -46,7 +60,7 @@ public class MainMenu : MonoBehaviour
             GUILayout.Label(gameName);
 
                 //Menu buttons
-                if (GUILayout.Button("Start"))
+                if (GUILayout.Button("Wave to begin or click Start"))
                 {
                     Application.LoadLevel("Level01"); //Change this to the level that is required!
                 }
