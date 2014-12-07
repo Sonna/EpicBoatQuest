@@ -9,7 +9,6 @@ public class MainMenu : MonoBehaviour
     public GUISkin MainMenuSkin;
     public float Width;
     public float Height;
-    public string gameName = "A-Boat Life";
     public string[] gameInstructions;
 
     public Texture2D background;
@@ -57,7 +56,6 @@ public class MainMenu : MonoBehaviour
         {
             GUI.Box(new Rect (ScreenX, ScreenY, Width, Height), background);
             GUILayout.BeginArea(new Rect (ScreenX, ScreenY, Width, Height));
-            GUILayout.Label(gameName);
 
                 //Menu buttons
                 if (GUILayout.Button("Wave to begin or click Start"))
@@ -83,7 +81,6 @@ public class MainMenu : MonoBehaviour
         if (CurrentMenu == Menu.Controls)
         {
             GUILayout.BeginArea (new Rect (ScreenX, ScreenY, Width, Height));
-            GUILayout.Label(gameName);
 
             foreach(string label in gameInstructions)
             {
