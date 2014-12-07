@@ -5,12 +5,20 @@ public class GameManager : Singleton<GameManager>
 {
     public GameObject player;
     public Vector3 shipStartPosition;
+    public Texture emptyStarTexture;
     public Texture starTexture;
     public int iconWidth;
     public int iconHeight;
     
     public int starsCollected = 0;
+    private int totalStars = 0;
 
+    void Start()
+    {
+        StarPickup[] totalStarsInScene = FindObjectsOfType<StarPickup>();
+
+        totalStars = totalStarsInScene.Length;
+    }
 
     void OnGUI()
     {
@@ -19,9 +27,9 @@ public class GameManager : Singleton<GameManager>
             return;
         }
 
-        for(int i = 0; i < starsCollected; i++)
+        for(int i = 0; i < totalStars; i++)
         {
-            GUI.DrawTexture(new Rect(i * iconWidth, 0, iconWidth, iconHeight), starTexture);
+            GUI.DrawTexture(new Rect(i * iconWidth, 0, iconWidth, iconHeight), (i < starsCollected ? starTexture : emptyStarTexture));
         }
     }
 }
