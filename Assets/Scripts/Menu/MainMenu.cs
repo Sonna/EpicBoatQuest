@@ -9,6 +9,8 @@ public class MainMenu : MonoBehaviour
     public string gameName = "A-Boat Life";
     public string[] gameInstructions;
 
+    public Texture2D background;
+
     private int toolbarInt = 0;
     private string[]  toolbarstrings =  {"Audio","Graphics","System"};
     private Menu CurrentMenu;
@@ -38,7 +40,8 @@ public class MainMenu : MonoBehaviour
 
         if (CurrentMenu == Menu.Main)
         {
-            GUILayout.BeginArea (new Rect (ScreenX, ScreenY, Width, Height));
+            GUI.Box(new Rect (ScreenX, ScreenY, Width, Height), background);
+            GUILayout.BeginArea(new Rect (ScreenX, ScreenY, Width, Height));
             GUILayout.Label(gameName);
 
                 //Menu buttons
