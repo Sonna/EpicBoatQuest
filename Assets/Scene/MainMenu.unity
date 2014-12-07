@@ -4639,6 +4639,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 715526138}
   - 114: {fileID: 715526137}
+  - 114: {fileID: 715526139}
   m_Layer: 0
   m_Name: MainMenu
   m_TagString: Untagged
@@ -4660,7 +4661,6 @@ MonoBehaviour:
   MainMenuSkin: {fileID: 11400000, guid: 8b51bf01412204615b2a19d7ab198ff0, type: 2}
   Width: 0
   Height: 0
-  gameName: A-Boat Life
   gameInstructions:
   - Wave you hands to generate wind.
   background: {fileID: 2800000, guid: c6f957052d7394ccea3440345f2e16b8, type: 3}
@@ -4675,6 +4675,27 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &715526139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 715526136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2761c9009eb80471884f135cc9621aa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logos:
+  - {fileID: 2800000, guid: ecbbf328d2b4b1b4db637b912eac770c, type: 3}
+  - {fileID: 2800000, guid: a4a0c96349df0ca4189ca324ce36f5dd, type: 3}
+  - {fileID: 2800000, guid: 2848f49a5b92f0346bbb054bdf763e07, type: 3}
+  - {fileID: 2800000, guid: f4c950ffcf78e024484a44cd250b3a8e, type: 3}
+  - {fileID: 2800000, guid: 8a376bc3a596224409ef18f289fa823e, type: 3}
+  - {fileID: 2800000, guid: d78ab684f7a0fcd42ad613a280429b7a, type: 3}
+  - {fileID: 2800000, guid: d6ebba0f99a2c484786532151b4d6c5a, type: 3}
+  Width: 0
+  Height: 0
 --- !u!1 &722253213
 GameObject:
   m_ObjectHideFlags: 0
