@@ -1,4 +1,5 @@
 using UnityEngine;
+using Leap;
 using System.Collections;
 
 public class MainMenu : MonoBehaviour
@@ -25,8 +26,8 @@ public class MainMenu : MonoBehaviour
     void Start ()
     {
         CurrentMenu = Menu.Main;
-        if (Width == 0 ) { Width = (Screen.width * 0.5f); }
-        if (Height == 0 ) { Height = (Screen.height * 0.5f); }
+        if (Width == 0 ) { Width = (UnityEngine.Screen.width * 0.5f); }
+        if (Height == 0 ) { Height = (UnityEngine.Screen.height * 0.5f); }
     }
 
     // Update is called once per frame
@@ -35,8 +36,8 @@ public class MainMenu : MonoBehaviour
         GUI.skin = MainMenuSkin;
 
         // Get half the screen and desired GUI item width
-        float ScreenX = (float)((Screen.width * 0.5) - (Width * 0.5));
-        float ScreenY = (float)((Screen.height) - (Height * 0.5));
+        float ScreenX = (float)((UnityEngine.Screen.width * 0.5) - (Width * 0.5));
+        float ScreenY = (float)((UnityEngine.Screen.height) - (Height * 0.5));
 
         if (CurrentMenu == Menu.Main)
         {
