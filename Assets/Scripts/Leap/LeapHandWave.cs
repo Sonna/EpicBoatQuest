@@ -22,8 +22,6 @@ public class LeapHandWave : MonoBehaviour
     private InteractiveCloth sailCloth;
     private AudioSource cameraAudioSource;
 
-    private AudioClip lastAudioclip;
-
     // Use this for initialization
     void Start()
     {
@@ -148,8 +146,6 @@ public class LeapHandWave : MonoBehaviour
         Debug.Log("Magnitude = " + magnitude);
 
         // Play Wind noises based off magnitude
-
-        AudioClip lastAudioclip = cameraAudioSource.clip;
 
         if (magnitude >= 100)
         {
