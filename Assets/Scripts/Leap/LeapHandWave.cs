@@ -72,6 +72,11 @@ public class LeapHandWave : MonoBehaviour
     //
     void FixedUpdate()
     {
+        if(GameManager.Instance.gameEnd)
+        {
+            return;
+        }
+
         float magnitude = 0f;
         Frame frame = m_leapController.Frame();
 
