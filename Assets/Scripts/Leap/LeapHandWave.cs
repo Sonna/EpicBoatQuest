@@ -85,30 +85,41 @@ public class LeapHandWave : MonoBehaviour
 */
 
         if (frame.Hands.Count >= 1 && leftHand.IsValid) {
-            Vector3 tempCamera = Camera.main.transform.forward;
-            tempCamera.y = transform.position.y;
-            Vector3 wind = tempCamera * leftHand.PalmVelocity.Magnitude / windDrag;
-            magnitude = leftHand.PalmVelocity.Magnitude;
+            maginitude = leftHand.PalmVelocity.Magnitude;
 
-            rigidbody.AddRelativeForce(wind, ForceMode.Impulse);
+            Vector3 tempCamera = Camera.main.transform.forward;
+            Vector3 localForward = transform.worldToLocalMatrix.MultiplyVector(tempCamera);
+            localForward.y = transform.position.y;
+            Vector3 wind = localForward * maginitude / windDrag;
+
+            if(maginitude >= 5.0f)
+            {
+                Vector3 targetDir = localForward * maginitude;
+                float step = 0.125f * Time.deltaTime;
+                Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0F);
+                transform.rotation = Quaternion.LookRotation(newDir);
+            }
 
             sailCloth.externalAcceleration = wind * 1000.0f;
 
             // something for two hands
             if (frame.Hands.Count >= 2)
             {
-                float roll = rightHand.PalmPosition.Roll;
+                wind = localForward * rightHand.PalmVelocity.Magnitude / windDrag;
+
+                float roll = leftHand.PalmPosition.Roll;
                 Debug.Log("Roll Ya'll " + roll);
-                if (roll > 2.5f)
+                if (roll < -2.7f)
                 {
                     cameraController.rotateLeft();
                 }
-                else if (roll < 2.4f)
+                else if (roll > -2.5f)
                 {
                     cameraController.rotateRight();
                 }
             }
           ProduceWind(magnitude/100);
+          rigidbody.AddRelativeForce(wind, ForceMode.Impulse);
         }
         else
         {
