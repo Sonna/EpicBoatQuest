@@ -13,6 +13,7 @@ public class MicrophoneInput : MonoBehaviour {
         audio.loop = true; // Set the AudioClip to loop
         audio.mute = true; // Mute the sound, we don't want the player to hear it
         //while (!(Microphone.GetPosition("Logitech USB Microphone") > 0)){} // Wait until the recording has started
+        if (Microphone.devices.Length <= 0) { return; }
         while (!(Microphone.GetPosition(device) > 0)){} // Wait until the recording has started
         audio.Play(); // Play the audio source!
     }
