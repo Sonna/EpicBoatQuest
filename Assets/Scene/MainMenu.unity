@@ -4686,7 +4686,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2761c9009eb80471884f135cc9621aa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logos: []
+  logos:
+  - {fileID: 2800000, guid: ecbbf328d2b4b1b4db637b912eac770c, type: 3}
+  - {fileID: 2800000, guid: a4a0c96349df0ca4189ca324ce36f5dd, type: 3}
+  - {fileID: 2800000, guid: 2848f49a5b92f0346bbb054bdf763e07, type: 3}
+  - {fileID: 2800000, guid: f4c950ffcf78e024484a44cd250b3a8e, type: 3}
+  - {fileID: 2800000, guid: 8a376bc3a596224409ef18f289fa823e, type: 3}
+  - {fileID: 2800000, guid: d78ab684f7a0fcd42ad613a280429b7a, type: 3}
+  - {fileID: 2800000, guid: d6ebba0f99a2c484786532151b4d6c5a, type: 3}
+  Width: 0
+  Height: 0
 --- !u!1 &722253213
 GameObject:
   m_ObjectHideFlags: 0
