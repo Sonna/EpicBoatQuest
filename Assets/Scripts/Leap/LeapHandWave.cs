@@ -66,7 +66,7 @@ public class LeapHandWave : MonoBehaviour
     // e.g every fifth frame it gets the Player's hand position and rotations and
     // calculates the positive difference.
     //
-    // The calculated maginitude is then applied as force to the boat object in the
+    // The calculated magnitude is then applied as force to the boat object in the
     // scene either directly or indriectly (possible an invisible collider object to
     // simulate wind)
     //
@@ -85,16 +85,16 @@ public class LeapHandWave : MonoBehaviour
 */
 
         if (frame.Hands.Count >= 1 && leftHand.IsValid) {
-            maginitude = leftHand.PalmVelocity.Magnitude;
+            magnitude = leftHand.PalmVelocity.Magnitude;
 
             Vector3 tempCamera = Camera.main.transform.forward;
             Vector3 localForward = transform.worldToLocalMatrix.MultiplyVector(tempCamera);
             localForward.y = transform.position.y;
-            Vector3 wind = localForward * maginitude / windDrag;
+            Vector3 wind = localForward * magnitude / windDrag;
 
-            if(maginitude >= 5.0f)
+            if(magnitude >= 5.0f)
             {
-                Vector3 targetDir = localForward * maginitude;
+                Vector3 targetDir = localForward * magnitude;
                 float step = 0.125f * Time.deltaTime;
                 Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0F);
                 transform.rotation = Quaternion.LookRotation(newDir);
