@@ -4676,6 +4676,7 @@ MonoBehaviour:
   gameName: A-Boat Life
   gameInstructions:
   - Wave you hands to generate wind.
+  background: {fileID: 2800000, guid: c6f957052d7394ccea3440345f2e16b8, type: 3}
 --- !u!4 &715526138
 Transform:
   m_ObjectHideFlags: 0
