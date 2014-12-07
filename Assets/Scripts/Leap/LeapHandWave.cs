@@ -74,6 +74,7 @@ public class LeapHandWave : MonoBehaviour
     {
         if(GameManager.Instance.gameEnd)
         {
+            ProduceWind(0f);
             return;
         }
 
