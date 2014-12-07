@@ -17,6 +17,8 @@ public class LeapHandWave : MonoBehaviour
     private CameraController cameraController;
     private ParticleSystem particleSystem;
 
+    private InteractiveCloth sailCloth;
+
     // Use this for initialization
     void Start()
     {
@@ -26,6 +28,7 @@ public class LeapHandWave : MonoBehaviour
         mousePosLastframe = Input.mousePosition;
         cameraController = Camera.main.GetComponent<CameraController>();
         particleSystem = Camera.main.GetComponentInChildren<ParticleSystem>();
+        sailCloth = GetComponentInChildren<InteractiveCloth>();
     }
 
     Hand GetLeftMostHand(Frame f)
@@ -74,6 +77,7 @@ public class LeapHandWave : MonoBehaviour
 
         Hand leftHand = GetLeftMostHand(frame);
         Hand rightHand = GetRightMostHand(frame);
+        sailCloth.externalAcceleration = Vector3.zero;
 /*
         foreach (Hand hand in frame.Hands) {
             Debug.Log(hand);
@@ -87,6 +91,8 @@ public class LeapHandWave : MonoBehaviour
             magnitude = leftHand.PalmVelocity.Magnitude;
 
             rigidbody.AddRelativeForce(wind, ForceMode.Impulse);
+
+            sailCloth.externalAcceleration = wind * 1000.0f;
 
             // something for two hands
             if (frame.Hands.Count >= 2)
@@ -102,6 +108,7 @@ public class LeapHandWave : MonoBehaviour
                     cameraController.rotateRight();
                 }
             }
+          ProduceWind(magnitude/100);
         }
         else
         {
@@ -117,9 +124,8 @@ public class LeapHandWave : MonoBehaviour
             rigidbody.AddRelativeForce(wind, ForceMode.Impulse);
 
             mousePosLastframe = mousePos;
+            ProduceWind(magnitude/10);
         }
-
-        ProduceWind(magnitude);
     }
 
     private void ProduceWind(float magnitude)
