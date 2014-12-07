@@ -47,7 +47,7 @@ public class MainMenu : MonoBehaviour
                 //Menu buttons
                 if (GUILayout.Button("Start"))
                 {
-                    Application.LoadLevel(1); //Change this to the level that is required!
+                    Application.LoadLevel("Level01"); //Change this to the level that is required!
                 }
                 if (GUILayout.Button("Controls"))
                 {
