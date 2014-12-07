@@ -20,6 +20,12 @@ public class VortexSuck : MonoBehaviour
     {
         foreach(GameObject suck in collidersInside)
         {
+            // ensure the objects have rigid bodies
+            if(suck.rigidbody == null)
+            {
+                break;
+            }
+
             float force = pullForce;
             Vector3 forceDirection;
 
