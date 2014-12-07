@@ -10,6 +10,8 @@ public class LeapHandWave : MonoBehaviour
 
     Controller m_leapController;
 
+    public AudioClip[] windNoises;
+
     private int particleSpawnRate = 3;
     private int windDrag;
     private int windMouseDrag;
@@ -18,6 +20,7 @@ public class LeapHandWave : MonoBehaviour
     private ParticleSystem particleSystem;
 
     private InteractiveCloth sailCloth;
+    private AudioSource cameraAudioSource;
 
     // Use this for initialization
     void Start()
@@ -29,6 +32,7 @@ public class LeapHandWave : MonoBehaviour
         cameraController = Camera.main.GetComponent<CameraController>();
         particleSystem = Camera.main.GetComponentInChildren<ParticleSystem>();
         sailCloth = GetComponentInChildren<InteractiveCloth>();
+        cameraAudioSource = Camera.main.GetComponent<AudioSource>();
     }
 
     Hand GetLeftMostHand(Frame f)
@@ -114,7 +118,7 @@ public class LeapHandWave : MonoBehaviour
                 wind = localForward * rightHand.PalmVelocity.Magnitude / windDrag;
 
                 float roll = leftHand.PalmPosition.Roll;
-                Debug.Log("Roll Ya'll " + roll);
+                //Debug.Log("Roll Ya'll " + roll);
                 if (roll < -2.7f)
                 {
                     cameraController.rotateLeft();
@@ -152,6 +156,26 @@ public class LeapHandWave : MonoBehaviour
 
             mousePosLastframe = mousePos;
             ProduceWind(magnitude/10);
+        }
+
+
+        Debug.Log("Magnitude = " + magnitude);
+
+        // Play Wind noises based off magnitude
+
+        if (magnitude >= 100)
+        {
+            cameraAudioSource.clip = windNoises[0];
+        }
+
+        if (!cameraAudioSource.isPlaying)
+        {
+            cameraAudioSource.Play();
+        }
+
+        if (magnitude <= 10)
+        {
+          cameraAudioSource.Stop();
         }
     }
 
