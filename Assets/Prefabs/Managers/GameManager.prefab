@@ -40,6 +40,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   shipStartPosition: {x: 0, y: 0, z: 0}
+  emptyStarTexture: {fileID: 2800000, guid: ee0747370c43c0440b419abd9ee81c8d, type: 3}
+  starTexture: {fileID: 2800000, guid: 1967819b7c894ba4aa9d619edb767941, type: 3}
+  iconWidth: 50
+  iconHeight: 50
   starsCollected: 0
 --- !u!1001 &100100000
 Prefab:
