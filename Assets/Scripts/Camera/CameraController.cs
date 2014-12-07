@@ -56,4 +56,9 @@ public class CameraController : MonoBehaviour
     {
         this.transform.RotateAround(boat.transform.position, Vector3.up, -rotateSpeed * Time.deltaTime);
     }
+
+    public void zoomOut()
+    {
+        this.transform.Translate(-boat.transform.forward / 10f, Space.Self);
+    }
 }

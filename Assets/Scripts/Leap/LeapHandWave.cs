@@ -72,6 +72,12 @@ public class LeapHandWave : MonoBehaviour
     //
     void FixedUpdate()
     {
+        if(GameManager.Instance.gameEnd)
+        {
+            ProduceWind(0f);
+            return;
+        }
+
         float magnitude = 0f;
         Frame frame = m_leapController.Frame();
 
@@ -131,6 +137,16 @@ public class LeapHandWave : MonoBehaviour
             tempCamera.y = transform.position.y;
             Vector3 wind = tempCamera * mousePosDiff.magnitude / windMouseDrag;
             magnitude = mousePosDiff.magnitude;
+            Vector3 localForward = transform.worldToLocalMatrix.MultiplyVector(tempCamera);
+            localForward.y = transform.position.y;
+
+            if(magnitude >= 5.0f)
+            {
+                Vector3 targetDir = localForward * magnitude;
+                float step = 0.25f * Time.deltaTime;
+                Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0F);
+                transform.rotation = Quaternion.LookRotation(newDir);
+            }
 
             rigidbody.AddRelativeForce(wind, ForceMode.Impulse);
 
