@@ -24,14 +24,32 @@ public class GameManager : Singleton<GameManager>
 
     void OnGUI()
     {
-        if (!starTexture) 
+        if(!gameEnd)
         {
-            return;
+            if (!starTexture) 
+            {
+                return;
+            }
+            
+            for(int i = 0; i < totalStars; i++)
+            {
+                GUI.DrawTexture(new Rect(i * iconWidth, 0, iconWidth, iconHeight), (i < starsCollected ? starTexture : emptyStarTexture));
+            }
         }
-
-        for(int i = 0; i < totalStars; i++)
+        else
         {
-            GUI.DrawTexture(new Rect(i * iconWidth, 0, iconWidth, iconHeight), (i < starsCollected ? starTexture : emptyStarTexture));
+            // Get half the screen and desired GUI item width
+            float Width = iconWidth * 3;
+            float Height = iconHeight * 3;
+
+            float ScreenX = (float)((UnityEngine.Screen.height * 0.5) - (Width * 0.5));
+            float ScreenY = (float)((UnityEngine.Screen.height / 2 ) - (Height * 0.5));
+
+            for(int i = 0; i < totalStars; i++)
+            {
+                ScreenY = (float)((UnityEngine.Screen.width * 0.5)) - ((Width * ((totalStars / 2) - i)));
+                GUI.DrawTexture(new Rect(ScreenY, ScreenX, iconWidth * 3, iconHeight * 3), (i < starsCollected ? starTexture : emptyStarTexture));
+            }
         }
     }
 
