@@ -7,12 +7,22 @@ public class StarPickup : MonoBehaviour
     public float timeBetweenEvents;
     private SpinOnSpot starSpin;
     private ParticleSystem particles;
+    public AudioClip starSoundEffect;
+    private AudioSource objectAudioSource;
 
     // Use this for initialization
     void Start () 
     {
         starSpin = GetComponentInChildren<SpinOnSpot>();
         particles = GetComponentInChildren<ParticleSystem>();
+
+        objectAudioSource = gameObject.GetComponent<AudioSource>();
+        if (objectAudioSource == null)
+        {
+            gameObject.AddComponent<AudioSource>();
+            objectAudioSource = gameObject.GetComponent<AudioSource>();
+        }
+        objectAudioSource.clip = starSoundEffect;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -28,6 +38,7 @@ public class StarPickup : MonoBehaviour
     {
         float counter = 0f;
 
+        objectAudioSource.Play();
         particles.Stop();
 
         while(counter < timeBetweenEvents)
