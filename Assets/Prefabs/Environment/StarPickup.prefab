@@ -27,7 +27,6 @@ GameObject:
   - 4: {fileID: 400002}
   - 136: {fileID: 13600000}
   - 114: {fileID: 11400000}
-  - 114: {fileID: 11400004}
   - 82: {fileID: 8200000}
   m_Layer: 0
   m_Name: StarPickup
@@ -188,6 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpinIncrease: 10
   timeBetweenEvents: 3
+  starSoundEffect: {fileID: 8300000, guid: ead5cad51c83342449da589f557d1924, type: 3}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -200,19 +200,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 45
---- !u!114 &11400004
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08965cc33a07b4ced8c627bf83ba8a27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  splashSoundEffects:
-  - {fileID: 8300000, guid: ead5cad51c83342449da589f557d1924, type: 3}
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1
