@@ -137,12 +137,17 @@ public class LeapHandWave : MonoBehaviour
             Vector2 mousePos = Input.mousePosition;
             Vector2 mousePosDiff = mousePos - mousePosLastframe;
 
+            magnitude = mousePosDiff.magnitude;
+            magnitude = Mathf.Clamp(magnitude, 0f, 700f);
+
             Vector3 tempCamera = Camera.main.transform.forward;
             tempCamera.y = transform.position.y;
-            Vector3 wind = tempCamera * mousePosDiff.magnitude / windMouseDrag;
-            magnitude = mousePosDiff.magnitude;
+            Vector3 wind = tempCamera * magnitude / windMouseDrag;
+
             Vector3 localForward = transform.worldToLocalMatrix.MultiplyVector(tempCamera);
             localForward.y = transform.position.y;
+
+
 
             if(magnitude >= 5.0f)
             {
