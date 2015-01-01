@@ -42,13 +42,22 @@ public class GameManager : Singleton<GameManager>
             float Width = iconWidth * 3;
             float Height = iconHeight * 3;
 
-            float ScreenX = (float)((UnityEngine.Screen.height * 0.5) - (Width * 0.5));
-            float ScreenY = (float)((UnityEngine.Screen.height / 2 ) - (Height * 0.5));
+            float screenCenterX = (float)((UnityEngine.Screen.width / 2));
+            float ScreenCenterY = (float)((UnityEngine.Screen.height / 2 ));
+
+            float ScreenX = screenCenterX;
+            float ScreenY = ScreenCenterY - (Height * 0.5f);
+
+            float halfStars = totalStars / 2f;
+
+            float StartX = screenCenterX - (halfStars * Width);
 
             for(int i = 0; i < totalStars; i++)
             {
-                ScreenY = (float)((UnityEngine.Screen.width * 0.5)) - ((Width * ((totalStars / 2) - i)));
-                GUI.DrawTexture(new Rect(ScreenY, ScreenX, iconWidth * 3, iconHeight * 3), (i < starsCollected ? starTexture : emptyStarTexture));
+                float x = StartX + (i * iconWidth * 3);
+                float y = ScreenY;
+
+                GUI.DrawTexture(new Rect(x, y, iconWidth * 3, iconHeight * 3), (i < starsCollected ? starTexture : emptyStarTexture));
             }
         }
     }
