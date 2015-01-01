@@ -25,6 +25,11 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update ()
     {
+        if(GameManager.Instance.gameEnd)
+        {
+            return;
+        }
+
         // Make hand gestures here
 
         if(Input.GetMouseButton((int)MOUSEBUTTON.LEFT_CLICK)
