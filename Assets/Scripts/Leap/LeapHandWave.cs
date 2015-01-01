@@ -147,8 +147,6 @@ public class LeapHandWave : MonoBehaviour
             Vector3 localForward = transform.worldToLocalMatrix.MultiplyVector(tempCamera);
             localForward.y = transform.position.y;
 
-
-
             if(magnitude >= 5.0f)
             {
                 Vector3 targetDir = localForward * magnitude;

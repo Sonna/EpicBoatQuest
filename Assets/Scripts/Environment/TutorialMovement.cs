@@ -51,7 +51,7 @@ public class TutorialMovement : MonoBehaviour {
         
         objectAudioSource.Play();
         
-        while(counter < fadeTime)
+        while(counter < fadeTime / 2f)
         {
             counter += Time.deltaTime;
             ChangeTextColour(textObject, true);
