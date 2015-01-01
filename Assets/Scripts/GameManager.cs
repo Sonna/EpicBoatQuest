@@ -42,23 +42,31 @@ public class GameManager : Singleton<GameManager>
             float Width = iconWidth * 3;
             float Height = iconHeight * 3;
 
-            float screenCenterX = (float)((UnityEngine.Screen.width / 2));
-            float ScreenCenterY = (float)((UnityEngine.Screen.height / 2 ));
-
-            float ScreenX = screenCenterX;
-            float ScreenY = ScreenCenterY - (Height * 0.5f);
-
             float halfStars = totalStars / 2f;
 
-            float StartX = screenCenterX - (halfStars * Width);
+            // Center screen then start in the middle on Y Axis 
+            // and center minus half the total length of stars on X Axis
+            float StartX = (float)((UnityEngine.Screen.width / 2)) - (halfStars * Width);
+            float StartY = (float)((UnityEngine.Screen.height / 2)) - (Height * 0.5f);
 
             for(int i = 0; i < totalStars; i++)
             {
-                float x = StartX + (i * iconWidth * 3);
-                float y = ScreenY;
+                float x = StartX + (i * Width);
 
-                GUI.DrawTexture(new Rect(x, y, iconWidth * 3, iconHeight * 3), (i < starsCollected ? starTexture : emptyStarTexture));
+                GUI.DrawTexture(new Rect(x, StartY, Width, Height), (i < starsCollected ? starTexture : emptyStarTexture));
             }
+
+            // Show level complete above the stars
+            GUIStyle centeredStyle = GUI.skin.GetStyle("Label");
+            centeredStyle.alignment = TextAnchor.MiddleCenter;
+            centeredStyle.fontStyle = FontStyle.Bold;
+            centeredStyle.normal.textColor = Color.blue;
+            centeredStyle.fontSize = 100;
+
+            // Draw it to screen
+            GUI.Label(new Rect((float)((UnityEngine.Screen.width / 2) - 500f),
+                                        StartY - 100, 1000, 100),
+                                        "Level Complete!", centeredStyle);
         }
     }
 
