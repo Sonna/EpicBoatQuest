@@ -2270,6 +2270,54 @@ TrailRenderer:
       rgba: 16777215
   m_MinVertexDistance: .100000001
   m_Autodestruct: 0
+--- !u!1001 &208805113
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400002, guid: 679fd9b0b53e57c4991eb1092eb7cf3e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -.737882614
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 679fd9b0b53e57c4991eb1092eb7cf3e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.05960274
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 679fd9b0b53e57c4991eb1092eb7cf3e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 8.27882671
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 679fd9b0b53e57c4991eb1092eb7cf3e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 679fd9b0b53e57c4991eb1092eb7cf3e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 679fd9b0b53e57c4991eb1092eb7cf3e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 679fd9b0b53e57c4991eb1092eb7cf3e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10200000, guid: 679fd9b0b53e57c4991eb1092eb7cf3e, type: 2}
+      propertyPath: m_Text
+      value: "If you are ever stuck\r\npress R to reset boat"
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 679fd9b0b53e57c4991eb1092eb7cf3e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3.62500429
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 679fd9b0b53e57c4991eb1092eb7cf3e, type: 2}
+  m_RootGameObject: {fileID: 1991897098}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &212408872
 GameObject:
   m_ObjectHideFlags: 0
@@ -6091,6 +6139,78 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!1 &614977647
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 679fd9b0b53e57c4991eb1092eb7cf3e, type: 2}
+  m_PrefabInternal: {fileID: 208805113}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 614977650}
+  - 23: {fileID: 614977649}
+  - 102: {fileID: 614977648}
+  m_Layer: 0
+  m_Name: TutorialText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!102 &614977648
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 10200000, guid: 679fd9b0b53e57c4991eb1092eb7cf3e,
+    type: 2}
+  m_PrefabInternal: {fileID: 208805113}
+  m_GameObject: {fileID: 614977647}
+  m_Text: "If you are ever stuck\r\npress R to reset boat"
+  m_OffsetZ: 0
+  m_CharacterSize: 1
+  m_LineSpacing: 1
+  m_Anchor: 0
+  m_Alignment: 1
+  m_TabSize: 4
+  m_FontSize: 90
+  m_FontStyle: 1
+  m_RichText: 1
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294901760
+--- !u!23 &614977649
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: 679fd9b0b53e57c4991eb1092eb7cf3e,
+    type: 2}
+  m_PrefabInternal: {fileID: 208805113}
+  m_GameObject: {fileID: 614977647}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+--- !u!4 &614977650
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 679fd9b0b53e57c4991eb1092eb7cf3e, type: 2}
+  m_PrefabInternal: {fileID: 208805113}
+  m_GameObject: {fileID: 614977647}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.62500429, y: 3.63937187, z: 2.34963608}
+  m_LocalScale: {x: .100000001, y: .100000001, z: .5}
+  m_Children: []
+  m_Father: {fileID: 1991897099}
 --- !u!1 &615301722
 GameObject:
   m_ObjectHideFlags: 0
@@ -6724,7 +6844,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 693366496}
   m_LocalRotation: {x: 0, y: -.707106829, z: 0, w: .707106829}
-  m_LocalPosition: {x: -32.2818489, y: -174.218964, z: 110.941765}
+  m_LocalPosition: {x: -31.0195236, y: -175.720581, z: 101.31459}
   m_LocalScale: {x: 150.000031, y: 130, z: 1}
   m_Children: []
   m_Father: {fileID: 771561572}
@@ -11561,7 +11681,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1328555668}
   m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: 43.2180901, y: -239.729828, z: 110.838089}
+  m_LocalPosition: {x: 43.9804955, y: -240.720566, z: 101.314606}
   m_LocalScale: {x: 150.000061, y: 150, z: 1}
   m_Children: []
   m_Father: {fileID: 771561572}
@@ -17557,7 +17677,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1729718744}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
-  m_LocalPosition: {x: 118.218147, y: -174.729828, z: 108.441727}
+  m_LocalPosition: {x: 118.218147, y: -174.729828, z: 101.162865}
   m_LocalScale: {x: 150, y: 130, z: 1}
   m_Children: []
   m_Father: {fileID: 771561572}
@@ -19224,6 +19344,65 @@ Prefab:
   m_RootGameObject: {fileID: 1738896099}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1991897098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100002, guid: 679fd9b0b53e57c4991eb1092eb7cf3e, type: 2}
+  m_PrefabInternal: {fileID: 208805113}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1991897099}
+  - 65: {fileID: 1991897101}
+  - 114: {fileID: 1991897100}
+  m_Layer: 0
+  m_Name: TutorialMessage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1991897099
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400002, guid: 679fd9b0b53e57c4991eb1092eb7cf3e, type: 2}
+  m_PrefabInternal: {fileID: 208805113}
+  m_GameObject: {fileID: 1991897098}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.737882614, y: 1.05960274, z: 8.27882671}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 614977650}
+  m_Father: {fileID: 0}
+--- !u!114 &1991897100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 679fd9b0b53e57c4991eb1092eb7cf3e,
+    type: 2}
+  m_PrefabInternal: {fileID: 208805113}
+  m_GameObject: {fileID: 1991897098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52c6bd67210624242be4bc706afbc0bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upSpeed: 1
+  fadeTime: 5
+  contactSoundEffect: {fileID: 0}
+  textObject: {fileID: 614977647}
+  fadeSpeed: 1
+--- !u!65 &1991897101
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6500000, guid: 679fd9b0b53e57c4991eb1092eb7cf3e,
+    type: 2}
+  m_PrefabInternal: {fileID: 208805113}
+  m_GameObject: {fileID: 1991897098}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20, y: 10, z: 5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2011755732
 GameObject:
   m_ObjectHideFlags: 0
